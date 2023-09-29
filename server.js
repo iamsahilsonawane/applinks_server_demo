@@ -19,6 +19,10 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
   ], null, 2));
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "ok" });
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
